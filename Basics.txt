@@ -1,0 +1,132 @@
+Everything in Java is pretty much the same as C++. 
+Let's talk a little bit about another thing.
+
+1. Widening casting is done itself
+i.e. if you assign int value to a double variable that's fine 
+
+code: 
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+
+but 
+
+narrowing casting ain't the same
+
+you have to do it manually
+
+code: 
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+
+
+2. Everything here is kind of an object in Java 
+
+Let's take an example.
+
+String (S is uppercase)
+
+A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example, the length of a string can be found with the length() method:
+
+code: 
+
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("The length of the txt string is: " + txt.length());
+
+String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+
+3. 
+
+Java uses the + operator for both addition and concatenation.
+
+Numbers are added. Strings are concatenated.
+
+If you add a number and a string, the result will be a string concatenation:
+
+String x = "10";
+int y = 20;
+String z = x + y;  // z will be 1020 (a String)
+
+
+4. Math class in java
+The Java Math class has many methods that allows you to perform mathematical tasks on numbers.
+
+code: 
+
+Math.max(5, 10);
+Math.min(5, 10);
+Math.abs(-4.7); // return 4.7
+Math.random();  //returns random value btw 0 to 1
+int randomNum = (int)(Math.random() * 101);  // 0 to 100
+
+
+5. For Each loop syntax
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+6. Arrays in Java:
+
+String[] cars;
+
+int[] myNum = {10, 20, 30, 40};
+
+
+use of length method in java
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4
+
+
+
+Loop through an array:
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+}
+
+
+
+Multi-dimensional array: 
+
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+myNumbers[1][2] = 9;
+System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7
+
+
+looping through it: 
+public class Main {
+   public static void main(String[] args) {
+     int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+     for (int i = 0; i < myNumbers.length; ++i) {
+        for(int j = 0; j < myNumbers[i].length; ++j) {
+           System.out.print(myNumbers[i][j]);
+        }
+        System.out.println(" ");
+     }
+   }
+}
+
+Output:
+
+1234 
+567 
