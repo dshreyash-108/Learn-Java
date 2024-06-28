@@ -42,3 +42,65 @@ public class MyClass implements Interface1, Interface2 {
 ## Can interfaces have fields? Why or why not?
 
 Interfaces can declare constants, which are implicitly public, static, and final. These are typically used for defining constants that implementing classes can use. However, interfaces cannot have instance fields (fields that are not static and final) because interfaces are meant to define a contract rather than store state. Instances of fields are specific to each class that implements the interface, which contradicts the purpose of defining common behavior in an interface.
+
+
+## New Features Added in Interfaces in JDK 8
+There are certain features added to Interfaces in JDK 8 update mentioned below:
+
+1. Prior to JDK 8, the interface could not define the implementation. We can now add default implementation for interface methods. This default implementation has a special use and does not affect the intention behind interfaces.
+
+Suppose we need to add a new function to an existing interface. Obviously, the old code will not work as the classes have not implemented those new functions. So with the help of default implementation, we will give a default body for the newly added functions. Then the old codes will still work.
+
+
+```java
+// Java program to show that interfaces can
+// have methods from JDK 1.8 onwards
+
+interface In1
+{
+    final int a = 10;
+    default void display()
+    {
+        System.out.println("hello");
+    }
+}
+
+// A class that implements the interface.
+class TestClass implements In1
+{
+    // Driver Code
+    public static void main (String[] args)
+    {
+        TestClass t = new TestClass();
+        t.display();
+    }
+}
+
+```
+
+2. Another feature that was added in JDK 8 is that we can now define static methods in interfaces that can be called independently without an object. 
+```php
+
+// Java Program to show that interfaces can
+// have methods from JDK 1.8 onwards
+
+interface In1
+{
+    final int a = 10;
+    static void display()
+    {
+        System.out.println("hello");
+    }
+}
+
+// A class that implements the interface.
+class TestClass implements In1
+{
+    // Driver Code
+    public static void main (String[] args)
+    {
+        In1.display();
+    }
+}
+
+```
