@@ -1,3 +1,5 @@
+# Learn abstract class with example of PUBG mobile
+
 ```java
 // Abstract class representing a Gun in PUBG
 abstract class Gun {

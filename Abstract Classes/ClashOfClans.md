@@ -1,3 +1,5 @@
+# Learn Abstract classes with example of Clash of clans
+
 ```java
 // Abstract class representing a Troop in Clash of Clans
 abstract class Troop {
