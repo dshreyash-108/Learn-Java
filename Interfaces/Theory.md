@@ -15,8 +15,6 @@ Uses of Interfaces in Java are mentioned below:**
    Interfaces are used to implement abstraction.
 5. variables in the interface are final, public, and static.
 
-![IMAGE](https://![alt text](image-1.png)):
-
 differnce btw class and interface:
 ![alt text](image.png)
 
