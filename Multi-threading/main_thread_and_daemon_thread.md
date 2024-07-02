@@ -1,3 +1,5 @@
+# Main Thread
+
 In Java, the main thread is special because it is the thread that executes the `main()` method of your program when it starts. Here's a summary of key points about the main thread and its behavior:
 
 1. **Main Thread Basics**:
