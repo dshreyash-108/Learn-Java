@@ -79,3 +79,7 @@ class Test implements Serializable {
 - **Purpose of transient**: Used primarily for security (to exclude sensitive information) or for optimization (excluding redundant or calculated fields).
 
 In summary, `transient` is a powerful keyword in Java serialization that allows developers to control which fields are serialized based on their specific needs, ensuring security and efficiency in object serialization processes.
+
+### transient vs volatile
+
+![alt text](image.png)
