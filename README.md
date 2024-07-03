@@ -5,7 +5,7 @@ I'll be commiting some codes here. It'll be helpful for those who already know a
 ### This will be helpful for:
 
 1. Java interview rounds
-2. Revision various important java concepts
+2. Revision of various important java concepts
 3. Java coding tests
 
 ### Resources:
