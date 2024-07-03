@@ -3,13 +3,16 @@
 In Java, the `transient` keyword is used to indicate to the Java serialization mechanism that a particular field should not be serialized when an object is converted into a byte stream. This is useful in scenarios where you have fields that contain sensitive information or fields that are derived/calculated and don't need to be saved.
 
 #### why we use it?
-    transient keyword plays an important role to meet security constraints. There are various real-life examples where we don’t want to save private data in file. Another use of transient keyword is not to serialize the variable whose value can be calculated/derived using other serialized objects or system such as age of a person, current date, etc.
 
-### Note: 
-    serialization is Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
+transient keyword plays an important role to meet security constraints. There are various real-life examples where we don’t want to save private data in file. Another use of transient keyword is not to serialize the variable whose value can be calculated/derived using other serialized objects or system such as age of a person, current date, etc.
+
+### Note:
+
+serialization is Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
 
 #### why we do serialization?
-    Serialization in Java (and other programming languages) is done to convert the state of an object into a byte stream, which can be easily stored, transmitted over a network, or persisted to a file system. This allows objects to be reconstructed later, preserving their state across different sessions or platforms.
+
+Serialization in Java (and other programming languages) is done to convert the state of an object into a byte stream, which can be easily stored, transmitted over a network, or persisted to a file system. This allows objects to be reconstructed later, preserving their state across different sessions or platforms.
 
 Let's analyze the example provided and understand how `transient` works:
 
@@ -57,6 +60,7 @@ class Test implements Serializable {
 ### Explanation of Output:
 
 1. **Serialization and Deserialization**:
+
    - The `Test` class implements `Serializable`, which allows its objects to be serialized and deserialized.
    - When `input` of type `Test` is serialized using `ObjectOutputStream`, its fields are written to the file "abc.txt".
    - When `input` is deserialized using `ObjectInputStream`, a new `Test` object `output` is created from the byte stream.
@@ -69,6 +73,7 @@ class Test implements Serializable {
    - `m = 50`: `m` is marked as `transient` and `final`. Final variables are directly serialized by their values, so the `transient` keyword has no effect on `m`. Hence, `m` retains its value of 50 after deserialization.
 
 ### Key Points:
+
 - **transient and static**: Transient fields are not serialized, but static fields are not serialized with individual objects anyway; their values are retained in the class definition.
 - **transient and final**: Final variables are serialized directly by their values, so `transient` has no effect on them.
 - **Purpose of transient**: Used primarily for security (to exclude sensitive information) or for optimization (excluding redundant or calculated fields).
