@@ -14,7 +14,7 @@ String str = "Hello";
 str = str.concat(" World");  // This creates a new String object "Hello World"
 ```
 
-### IMP 📌🚨
+### IMP: NOTE THE OUTPUT DIFFERENCES HERE 📌🚨
 
 ```java
 // Java Program to demonstrate Immutable String in Java
