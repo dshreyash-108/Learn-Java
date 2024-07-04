@@ -39,3 +39,5 @@ Overall, Java's decision to make strings immutable is a design choice that balan
 ### 3. Why Java uses the concept of string literal?
 
 - To make Java more memory efficient (because no new objects are created if it exists already in the string constant pool).
+
+![alt text](image.png)
