@@ -101,3 +101,89 @@ In summary, the choice among `String`, `StringBuffer`, and `StringBuilder` depen
 - Use `String` for immutable, constant values.
 - Use `StringBuffer` for mutable operations in multithreaded environments.
 - Use `StringBuilder` for mutable operations in single-threaded environments where performance is critical.
+
+## String functions :
+
+important and commonly used functions and methods available for working with strings in Java:
+
+### 1. `length()`
+
+- **Description**: Returns the length (number of characters) of the string.
+- **Usage**: `int length = str.length();`
+
+### 2. `charAt(int index)`
+
+- **Description**: Returns the character at the specified index in the string.
+- **Usage**: `char ch = str.charAt(0);`
+
+### 3. `substring(int beginIndex)`
+
+- **Description**: Returns a substring of the string starting from `beginIndex` to the end of the string.
+- **Usage**: `String substr = str.substring(3);`
+
+### 4. `substring(int beginIndex, int endIndex)`
+
+- **Description**: Returns a substring of the string starting from `beginIndex` to `endIndex-1`.
+- **Usage**: `String substr = str.substring(2, 5);`
+
+### 5. `indexOf(String str)`
+
+- **Description**: Returns the index of the first occurrence of the specified substring within the string, or `-1` if not found.
+- **Usage**: `int index = str.indexOf("lo");`
+
+### 6. `lastIndexOf(String str)`
+
+- **Description**: Returns the index of the last occurrence of the specified substring within the string, or `-1` if not found.
+- **Usage**: `int lastIndex = str.lastIndexOf("lo");`
+
+### 7. `startsWith(String prefix)`
+
+- **Description**: Checks if the string starts with the specified prefix.
+- **Usage**: `boolean startsWith = str.startsWith("He");`
+
+### 8. `endsWith(String suffix)`
+
+- **Description**: Checks if the string ends with the specified suffix.
+- **Usage**: `boolean endsWith = str.endsWith("lo");`
+
+### 9. `toUpperCase()`
+
+- **Description**: Returns a new string with all characters converted to uppercase.
+- **Usage**: `String upperCaseStr = str.toUpperCase();`
+
+### 10. `toLowerCase()`
+
+- **Description**: Returns a new string with all characters converted to lowercase.
+- **Usage**: `String lowerCaseStr = str.toLowerCase();`
+
+### 11. `trim()`
+
+- **Description**: Returns a new string with leading and trailing whitespace removed.
+- **Usage**: `String trimmedStr = str.trim();`
+
+### 12. `replace(char oldChar, char newChar)`
+
+- **Description**: Returns a new string where all occurrences of `oldChar` are replaced with `newChar`.
+- **Usage**: `String replacedStr = str.replace('l', 'L');`
+
+### 13. `replaceAll(String regex, String replacement)`
+
+- **Description**: Returns a new string where all substrings that match the given regular expression `regex` are replaced with `replacement`.
+- **Usage**: `String replacedStr = str.replaceAll("\\s+", "");`
+
+### 14. `split(String regex)`
+
+- **Description**: Splits the string into an array of substrings based on the delimiter specified by the regular expression `regex`.
+- **Usage**: `String[] parts = str.split("\\s+");`
+
+### 15. `concat(String str)`
+
+- **Description**: Concatenates the specified string `str` to the end of the invoking string.
+- **Usage**: `String concatenatedStr = str.concat(" World");`
+
+### 16. `isEmpty()`
+
+- **Description**: Checks if the string is empty (i.e., has a length of `0`).
+- **Usage**: `boolean isEmpty = str.isEmpty();`
+
+These are some of the most commonly used methods and functions for manipulating and working with strings in Java. They provide powerful capabilities for string handling, manipulation, searching, and extraction.
