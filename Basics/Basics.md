@@ -155,7 +155,7 @@ System.out.println(names[1]); // Outputs: Bob
 
 ### 4. **Object-Oriented Programming (OOP) Concepts**
 
-Java is a fully object-oriented programming language. Key OOP concepts include:
+Java is a not fully object-oriented programming language. Key OOP concepts include:
 
 - **Classes and Objects**: Classes define objects. Objects are instances of classes.
 
