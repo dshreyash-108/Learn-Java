@@ -38,10 +38,13 @@ DO IMPS from here: https://www.geeksforgeeks.org/java-collections-interview-ques
    - Implements a doubly linked list.
    - Supports insertion and deletion of elements at both ends efficiently.
    - Not synchronized.
+     **Iteration:
+      Time Complexity: O(n)
+      Iterating through a LinkedHashSet is O(n), where n is the number of elements in the set. This is because it involves traversing the linked list of elements.**
 
-   ```java
-   LinkedList<Type> linkedList = new LinkedList<>();
-   ```
+```java
+LinkedList<Type> linkedList = new LinkedList<>();
+```
 
 5. **HashSet**:
 
