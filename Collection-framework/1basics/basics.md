@@ -1,5 +1,7 @@
 Collections class in Java is one of the utility classes in Java Collections Framework. The java.util package contains the Collections class in Java. Java Collections class is used with the static methods that operate on the collections or return the collection. All the methods of this class throw the NullPointerException if the collection or object passed to the methods is null.
 
+DO IMPS from here: https://www.geeksforgeeks.org/java-collections-interview-questions/
+
 ![alt text](image.png)
 
 1. **ArrayList**:
