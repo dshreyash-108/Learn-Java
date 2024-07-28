@@ -88,3 +88,65 @@ public class Client {
 - **ConcreteFactory**: Implementations of the `ProductFactory` that create concrete products.
 
 By using the Factory Design Pattern, you encapsulate object creation, making it easier to manage and extend the codebase. This pattern helps to adhere to the Open/Closed Principle (software entities should be open for extension but closed for modification).
+
+Extra example:
+
+```java
+public class FactoryPattern {
+
+    public interface OS {
+        void functions();
+    }
+
+    public static class Windows implements OS {
+        @Override
+        public void functions() {
+            System.out.println("This is my OS");
+            System.out.println("Have a bit of issues");
+            System.out.println("This is windows by the way");
+        }
+    }
+
+    public static class Ios implements OS {
+        @Override
+        public void functions() {
+            System.out.println("This is IOS and it's pretty safe and expensive");
+        }
+    }
+
+    public static class Myfactory1 {
+        private Myfactory1() {
+            // Private constructor to prevent instantiation
+        }
+
+        public static OS getInstance(String str) {
+            switch (str) {
+                case "myos":
+                    return new Windows();
+                case "safe":
+                    return new Ios();
+                default:
+                    System.out.println("There ain't no OS like this here.");
+                    return null; // Return null if no match is found
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        OS os1 = Myfactory1.getInstance("myos");
+        if (os1 != null) {
+            os1.functions(); // Print the functions of the OS
+        }
+
+        OS os2 = Myfactory1.getInstance("safe");
+        if (os2 != null) {
+            os2.functions(); // Print the functions of the OS
+        }
+
+        OS os3 = Myfactory1.getInstance("xyz");
+        if (os3 != null) {
+            os3.functions(); // Print the functions of the OS
+        }
+    }
+}
+```
